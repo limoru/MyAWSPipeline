@@ -6,4 +6,4 @@ Resources:
         UserData:
           Fn::Base64: |
             #!/bin/bash
-            docker run -d -p 80:80 ${IMAGE_URI}
+            docker run -d -p 80:80 {{IMAGE_URI}}
