@@ -7,9 +7,4 @@ Resources:
         UserData:
           Fn::Base64: |
             #!/bin/bash
-            # 安装 Docker 并运行指定镜像
-            yum update -y
-            amazon-linux-extras install docker -y
-            service docker start
-            usermod -a -G docker ec2-user
-            docker run -d -p 80:80 ${ECR_IMAGE_URI}
+            docker run -d -p 80:80 ${IMAGE_URI}
