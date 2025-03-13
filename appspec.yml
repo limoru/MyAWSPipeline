@@ -3,7 +3,6 @@ Resources:
   - TargetService:
       Type: AWS::EC2::Instance
       Properties:
-        ImageId: latest  # 实际由 CloudFormation 动态替换
         UserData:
           Fn::Base64: |
             #!/bin/bash
